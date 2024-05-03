@@ -11,17 +11,17 @@ DROP TABLE IF EXISTS employees;
 
 DROP TABLE IF EXISTS salary;
 
+-- Create new tables to import data
+CREATE TABLE departments (
+	dept_no	VARCHAR(10) NOT NULL, 
+	dept_name TEXT NOT NULL PRIMARY KEY
+);
+
 -- Create new table to import data
 CREATE TABLE dept_emp (
 	emp_no	int NOT NULL, 
 	dept_no VARCHAR (10) NOT NULL,
 	PRIMARY KEY (emp_no, dept_no)
-);
-
--- Create new tables to import data
-CREATE TABLE departments (
-	dept_no	VARCHAR(10) NOT NULL, 
-	dept_name TEXT NOT NULL PRIMARY KEY
 );
 
 
@@ -35,7 +35,7 @@ CREATE TABLE dept_manager (
 -- Create new table to import data
 CREATE TABLE title (
 	title_id VARCHAR (20) NOT NULL PRIMARY KEY,
-	title TEXT NOT NULL,
+	title TEXT NOT NULL
 );
 
 -- Create new table to import data
